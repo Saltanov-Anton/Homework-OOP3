@@ -1,5 +1,9 @@
 
 public class Car extends Transport {
+//    public Car(String brand, String model, int year, String country, String color, int maxSpeed) {
+//        super(brand, model, year, country, color, maxSpeed);
+//    }
+
     private class Key {
         private final boolean remoteStart;
         private final boolean keylessAccess;
@@ -22,42 +26,13 @@ public class Car extends Transport {
     private static final int DEFAULT_SEATS = 5;
 
     public Car(String brand, String model, double engineVolume, String color, int year, String country,
-               String transmission, String bodyType, String registrationNumber, int seats, boolean winterTires) {
-
-        if (brand == null || brand.isEmpty()) {
-            this.brand = DEFAULT_VALUE;
-        } else {
-            this.brand = brand;
-        }
-
-        if (model == null || model.isEmpty()) {
-            this.model = DEFAULT_VALUE;
-        } else {
-            this.model = brand;
-        }
+               String transmission, String bodyType, String registrationNumber, int seats, boolean winterTires, int maxSpeed) {
+        super(brand, model, year, country, color, maxSpeed);
 
         if (engineVolume <= 0) {
             this.engineVolume = DEFAULT_ENGIN_VOLUME;
         } else {
             this.engineVolume = engineVolume;
-        }
-
-        if (color == null || color.isEmpty()) {
-            this.color = DEFAULT_COLOR;
-        } else {
-            this.color = color;
-        }
-
-        if (year > 0) {
-            this.year = DEFAULT_YEAR;
-        } else {
-            this.year = year;
-        }
-
-        if (country == null || country.isEmpty()) {
-            this.country = DEFAULT_VALUE;
-        } else {
-            this.country = brand;
         }
 
         if (transmission == null || transmission.isEmpty()) {
