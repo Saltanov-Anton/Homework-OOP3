@@ -1,7 +1,7 @@
 public class Transport {
-    protected String brand;
-    protected String model;
-    protected int year;
+    protected final String brand;
+    protected final String model;
+    protected final int year;
     protected String country;
     protected String color;
     protected int maxSpeed;
@@ -48,20 +48,8 @@ public class Transport {
         return brand;
     }
 
-    public void setBrand(String brand) {
-        if (brand != null && !brand.isEmpty() && !brand.isBlank()) {
-            this.brand = brand;
-        }
-    }
-
     public String getModel() {
         return model;
-    }
-
-    public void setModel(String model) {
-        if (model != null && !model.isEmpty() && !model.isBlank()) {
-            this.model = model;
-        }
     }
 
     public int getYear() {
